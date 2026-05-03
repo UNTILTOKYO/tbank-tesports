@@ -43,20 +43,6 @@ const config = {
         },
       }),
     ],
-    [
-      'redocusaurus',
-      {
-        specs: [
-          {
-            spec: 'docs/api/openapi.yaml',
-            route: '/api/',
-          },
-        ],
-        theme: {
-          primaryColor: '#1890ff',
-        },
-      },
-    ],
   ],
 
   plugins: ['docusaurus-plugin-drawio'],

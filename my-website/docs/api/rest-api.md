@@ -25,7 +25,7 @@ Base URL: `https://api.t-esports.ru/v1`
 
 **Ответ 200:**
 
-\`\`\`json
+```json
 [
   {
     "id": "string",
@@ -42,7 +42,7 @@ Base URL: `https://api.t-esports.ru/v1`
     }
   }
 ]
-\`\`\`
+```
 
 ---
 
@@ -52,7 +52,7 @@ Base URL: `https://api.t-esports.ru/v1`
 
 **Request Body:**
 
-\`\`\`json
+```json
 {
   "name": "string",
   "format": "ONLINE",
@@ -61,20 +61,20 @@ Base URL: `https://api.t-esports.ru/v1`
   "max_teams": 16,
   "discipline": "CS2"
 }
-\`\`\`
+```
 
 **Валидация:**
 - `name` — от 3 до 100 символов, обязательное
 - `format` — `ONLINE` или `LAN`
-- `date` — дата ≥ текущей
-- `max_teams` — целое число ≥ 2
+- `date` — дата не раньше текущей
+- `max_teams` — целое число не менее 2
 - `region` — `RUSSIA`, `EUROPE`, `AMERICA`
 
 **Ответ 201:** Tournament object со статусом `DRAFT`
 
 ---
 
-### GET /tournaments/{id}
+### GET /tournaments/:id
 
 Получить турнир по ID.
 
@@ -88,7 +88,7 @@ Base URL: `https://api.t-esports.ru/v1`
 
 ---
 
-### PATCH /tournaments/{id}/publish
+### PATCH /tournaments/:id/publish
 
 Опубликовать турнир — изменить статус с `DRAFT` на `PUBLISHED`.
 

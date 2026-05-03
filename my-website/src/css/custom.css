@@ -1,0 +1,247 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+:root {
+  --ifm-color-primary: #7c6af7;
+  --ifm-color-primary-dark: #6655f5;
+  --ifm-color-primary-darker: #5b49f4;
+  --ifm-color-primary-darkest: #3c28f1;
+  --ifm-color-primary-light: #927ff9;
+  --ifm-color-primary-lighter: #9d8cfa;
+  --ifm-color-primary-lightest: #bcb0fc;
+
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #111111;
+  --ifm-navbar-background-color: #0d0d0d;
+  --ifm-footer-background-color: #0d0d0d;
+  --ifm-sidebar-background: #0f0f0f;
+
+  --ifm-font-family-base: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  --ifm-font-color-base: #e8e8e8;
+  --ifm-heading-color: #f0f0f0;
+  --ifm-letter-spacing: -0.05em;
+
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 60px;
+  --ifm-global-border: 1px solid #1e1e1e;
+}
+
+/* Base */
+html[data-theme='dark'],
+html {
+  background-color: #0a0a0a;
+  color: #e8e8e8;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  letter-spacing: var(--ifm-letter-spacing);
+  background-color: #0a0a0a;
+  color: #e8e8e8;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-font-family-base);
+  letter-spacing: -0.05em;
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+/* Navbar */
+.navbar {
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #1a1a1a;
+  backdrop-filter: blur(10px);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #f0f0f0;
+}
+
+.navbar__link {
+  color: #aaaaaa;
+  letter-spacing: -0.05em;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #f0f0f0;
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+  background-color: #0f0f0f;
+  border-right: 1px solid #1a1a1a;
+}
+
+.menu__link {
+  color: #999999;
+  letter-spacing: -0.05em;
+  border-radius: 4px;
+}
+
+.menu__link:hover,
+.menu__link--active {
+  color: #f0f0f0;
+  background-color: #1a1a1a;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: #161616;
+}
+
+/* Main content */
+.main-wrapper {
+  background-color: #0a0a0a;
+}
+
+article {
+  background-color: #0a0a0a;
+}
+
+/* Cards / admonitions */
+.alert {
+  background-color: #111111;
+  border-color: #2a2a2a;
+  color: #e8e8e8;
+}
+
+/* Tables */
+table {
+  background-color: #0f0f0f;
+  border-color: #1e1e1e;
+}
+
+table thead tr {
+  background-color: #141414;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+table thead th {
+  color: #f0f0f0;
+  letter-spacing: -0.05em;
+}
+
+table tbody tr {
+  background-color: #0f0f0f;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #111111;
+}
+
+table td, table th {
+  border-color: #1e1e1e;
+  color: #d0d0d0;
+}
+
+/* Code blocks */
+code {
+  background-color: #161616;
+  border: 1px solid #252525;
+  color: #c9a0ff;
+  letter-spacing: 0;
+}
+
+.prism-code {
+  background-color: #0f0f0f !important;
+  border: 1px solid #1e1e1e;
+}
+
+/* Pagination */
+.pagination-nav__link {
+  background-color: #111111;
+  border-color: #1e1e1e;
+}
+
+.pagination-nav__link:hover {
+  background-color: #161616;
+  border-color: #2a2a2a;
+}
+
+.pagination-nav__label {
+  color: #e8e8e8;
+  letter-spacing: -0.05em;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid #1a1a1a;
+  color: #666666;
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: #777777;
+  letter-spacing: -0.05em;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: #e8e8e8;
+}
+
+/* TOC (table of contents) */
+.table-of-contents__link {
+  color: #666666;
+  letter-spacing: -0.05em;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #e8e8e8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Hero / landing */
+.hero {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0d0d0d 100%);
+  color: #f0f0f0;
+}
+
+.hero__title {
+  letter-spacing: -0.05em;
+  font-size: 3rem;
+  color: #f0f0f0;
+}
+
+.hero__subtitle {
+  letter-spacing: -0.05em;
+  color: #888888;
+}
+
+.button--secondary {
+  background-color: #1a1a1a;
+  border-color: #2a2a2a;
+  color: #e8e8e8;
+}
+
+.button--secondary:hover {
+  background-color: #222222;
+  color: #ffffff;
+}
